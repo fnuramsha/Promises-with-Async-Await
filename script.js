@@ -40,6 +40,7 @@ const whereAMI = async function () {
   try {
     // geocation
     const pos = await geoPosition();
+    console.log(pos);
     const { latitude: lat, longitude: lng } = pos.coords;
     //   reverse geooding
     const geoApi = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
